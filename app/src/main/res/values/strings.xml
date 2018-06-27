@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HighWayFee</string>
+    <string name="toast_data_not_found">対象のデータが見つかりませんでした</string>
+    <string name="toast_something_wrong_happened_on_communication">通信中に予期しないエラーが発生しました</string>
+    <string name="toast_communication_error_occurred">通信エラーが発生しました</string>
+</resources>

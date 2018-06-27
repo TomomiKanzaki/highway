@@ -1,0 +1,13 @@
+package co.to_kanzaki.highwayfee.Util
+
+import io.reactivex.Scheduler
+
+interface SchedulerProvider {
+    fun ui(): Scheduler
+
+    fun computation(): Scheduler
+
+    fun newThread(): Scheduler
+
+    fun io(): Scheduler
+}
