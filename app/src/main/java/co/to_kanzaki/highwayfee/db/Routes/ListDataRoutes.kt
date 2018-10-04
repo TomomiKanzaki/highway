@@ -1,0 +1,26 @@
+package co.to_kanzaki.highwayfee.db.Routes
+
+data class ListDataRoutes(var id: Long?,
+                          var routeNo: Long?,
+                          var totalToll: Long?,
+                          var totalTime: Long?,
+                          var totalLength: Any?,
+                          var detailNo: Long?,
+                          var sectionOrder: Long?,
+                          var sectionFrom: String?,
+                          var sectionTo: String?,
+                          var sectionLength: Any?,
+                          var sectionTime: Long?,
+                          var subsectionNo: Long?,
+                          var subsectionFrom: String?,
+                          var subsectionRoad: String?,
+                          var subsectionTo: String?,
+                          var subsectionLength: Any?,
+                          var subsectionTime: Long?,
+                          var tollNo: Long?,
+                          var tollNormal: String?,
+                          var tollEtc: String?,
+                          var tollEtc2: String?,
+                          var tollNight: String?,
+                          var tollHoliday: String?
+)

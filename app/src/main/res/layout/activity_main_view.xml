@@ -1,23 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/fl_depart"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_depart"
+            android:paddingStart="50dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/fab"
-        android:text="fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl_destination"
+        android:layout_below="@+id/fl_depart"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_destination"
+            android:paddingStart="50dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/fl_destination"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_caution"
+                android:layout_marginBottom="15dp"
+                android:text="車種（二輪車は軽自動車を選択）"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/ll_cartype"
+                android:background="@drawable/radius_7"
+                android:layout_below="@+id/tv_caution"
+                android:layout_marginBottom="15dp"
+                android:weightSum="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/tv_cartype1"
+                    android:text="軽自動車"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/radius_7_left_solid_accent"
+                    android:singleLine="true"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_cartype2"
+                    android:text="普通車"
+                    android:textAlignment="center"
+                    android:background="@drawable/radius_none_stroke_top_bottom"
+                    android:singleLine="true"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_cartype3"
+                    android:text="中型車"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:background="@drawable/radius_none_stroke_top_bottom"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_cartype4"
+                    android:text="大型車"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:background="@drawable/radius_none_stroke_top_bottom"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_cartype5"
+                    android:background="@drawable/radius_7_right"
+                    android:text="特大車"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/center_view"
+                android:layout_width="1dp"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_sort"
+                android:layout_below="@+id/ll_cartype"
+                android:background="@drawable/radius_7"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/tv_sort1"
+                    android:text="時間"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/radius_7_left_solid_accent"
+                    android:singleLine="true"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_sort2"
+                    android:text="距離"
+                    android:textAlignment="center"
+                    android:background="@drawable/radius_none_stroke_top_bottom"
+                    android:singleLine="true"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/tv_sort3"
+                    android:text="料金"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:background="@drawable/radius_7_right"
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/search"
+                android:layout_below="@+id/ll_sort"
+                android:layout_marginTop="30dp"
+                android:text="検索"
+                android:textColor="@color/white"
+                android:background="@drawable/radius_7_color_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

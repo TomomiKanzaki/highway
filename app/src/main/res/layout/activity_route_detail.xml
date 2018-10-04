@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/greyLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_back"
+            android:text="〈 戻る"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="13dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:paddingTop="13dp"
+            android:layout_marginEnd="54sp"
+            android:layout_toRightOf="@+id/tv_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_route_detail"
+        android:layout_below="@+id/rl_title"
+        android:text="ルート詳細"
+        android:textColor="@color/grey"
+        android:layout_marginTop="15dp"
+        android:paddingTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_route_detail"
+        android:background="@color/white"
+        android:layout_below="@+id/tv_route_detail"
+        android:layout_above="@+id/center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:id="@+id/center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:id="@+id/tv_fee"
+        android:layout_below="@+id/center_vertical"
+        android:text="料金"
+        android:textColor="@color/grey"
+        android:layout_marginTop="15dp"
+        android:paddingTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_fee"
+        android:background="@color/white"
+        android:layout_below="@+id/tv_fee"
+        android:layout_above="@+id/bottom_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:id="@+id/bottom_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</RelativeLayout>

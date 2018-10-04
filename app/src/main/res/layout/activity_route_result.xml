@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_back"
+            android:text="〈 戻る"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="13dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:paddingTop="13dp"
+            android:layout_toRightOf="@+id/tv_back"
+            android:layout_toLeftOf="@+id/to_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/to_map"
+            android:text="マップ"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="13dp"
+            android:paddingEnd="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_feetype"
+        android:layout_below="@+id/rl_title"
+        android:background="@drawable/radius_7"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv_fee1"
+            android:text="通常"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@drawable/radius_7_left_solid_accent"
+            android:singleLine="true"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:background="@color/colorAccent"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+        <TextView
+            android:id="@+id/tv_fee2"
+            android:text="ETC"
+            android:textAlignment="center"
+            android:background="@drawable/radius_none_stroke_top_bottom"
+            android:singleLine="true"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:background="@color/colorAccent"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+        <TextView
+            android:id="@+id/tv_fee3"
+            android:text="ETC2.0"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:background="@drawable/radius_none_stroke_top_bottom"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:background="@color/colorAccent"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+        <TextView
+            android:id="@+id/tv_fee4"
+            android:text="深夜"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:background="@drawable/radius_none_stroke_top_bottom"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:background="@color/colorAccent"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+        <TextView
+            android:id="@+id/tv_fee5"
+            android:background="@drawable/radius_7_right"
+            android:text="休日"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll_feetype"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <!--</android.support.v7.widget.RecyclerView>-->
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

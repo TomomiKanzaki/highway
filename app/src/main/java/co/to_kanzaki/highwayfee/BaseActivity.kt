@@ -11,13 +11,13 @@ open class BaseActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        hideSystemBars()
+//        hideSystemBars()
         initProgressDialog()
     }
 
     override fun onResume() {
         super.onResume()
-        hideSystemBars()
+//        hideSystemBars()
     }
 
     override fun onBackPressed() {

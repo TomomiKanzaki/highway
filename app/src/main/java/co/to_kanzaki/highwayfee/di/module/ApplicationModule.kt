@@ -9,6 +9,7 @@ import co.to_kanzaki.highwayfee.Service
 import co.to_kanzaki.highwayfee.Util.AppSchedulerProvider
 import co.to_kanzaki.highwayfee.Util.DefaultPrefs
 import co.to_kanzaki.highwayfee.Util.SchedulerProvider
+import co.to_kanzaki.highwayfee.db.DataBaseRoute
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -53,7 +54,7 @@ class ApplicationModule(val application: CustomApplication) {
 
     @Singleton
     @Provides
-    fun provideCheckinService(client: OkHttpClient): Service {
+    fun provideService(client: OkHttpClient): Service {
 
         return Retrofit.Builder().client(client)
                 .baseUrl(BuildConfig.API_ROOT)

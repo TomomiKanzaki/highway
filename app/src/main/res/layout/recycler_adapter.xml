@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_candidate"
+        android:textColor="@color/grey"
+        android:paddingTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/tv_sum"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:paddingVertical="15dp"
+        android:paddingStart="15dp"
+        android:background="@color/background"
+        android:layout_below="@+id/tv_candidate"
+        android:layout_toLeftOf="@+id/tv_distance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/tv_distance"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:paddingTop="7dp"
+        android:background="@color/background"
+        android:layout_below="@+id/tv_candidate"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="25dp" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:background="@color/background"
+        android:layout_below="@+id/tv_distance"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="25dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_child"
+        android:layout_below="@+id/tv_sum"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

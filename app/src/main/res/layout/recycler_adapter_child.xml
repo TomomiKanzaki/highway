@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/route"
+        android:textSize="13dp"
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <TextView
+        android:id="@+id/tv_distance"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:paddingTop="7dp"
+        android:layout_toLeftOf="@+id/tv_detail"
+        android:layout_width="70dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/tv_detail"
+        android:layout_below="@+id/tv_distance"
+        android:layout_width="70dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/tv_detail"
+        android:text="〉"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:textColor="@color/grey"
+        android:paddingTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="60dp" />
+
+</RelativeLayout>

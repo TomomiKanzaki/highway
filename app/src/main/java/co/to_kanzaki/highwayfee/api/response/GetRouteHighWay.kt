@@ -6,14 +6,14 @@ import org.simpleframework.xml.ElementList
 import org.simpleframework.xml.Root
 
 @Root(name = "Result", strict = false)
-class GetRouteHighWay(){
+class GetRouteHighWay{
     @field:Element(name = "Status", required = false)var Status: String = ""
     @field:Element(name = "From", required = false)var From: String = ""
     @field:Element(name = "To", required = false)var To: String = ""
     @field:Element(name = "CarType", required = false)var CarType: String = ""
-    @field:ElementList(entry = "FromICs", required = false, inline = true)var FromICs: List<FromICs>? = null
-    @field:ElementList(entry = "ToICs", required = false, inline = true)var ToICs: List<ToICs>? = null
-    @field:ElementList(entry = "StateICs", required = false, inline = true)var StateICs: List<StateICs>? = null
+//    @field:ElementList(entry = "FromICs", required = false, inline = true)var FromICs: List<FromICs>? = null
+//    @field:ElementList(entry = "ToICs", required = false, inline = true)var ToICs: List<ToICs>? = null
+//    @field:ElementList(entry = "StateICs", required = false, inline = true)var StateICs: List<StateICs>? = null
     @field:Element(name = "SortBy", required = false)var SortBy: String = ""
     @field:ElementList(entry = "Routes", required = false)var Routes: List<Route>? = null
 }
@@ -41,7 +41,7 @@ class StateICs{
 @Root(strict = false)
 class Route{
     @field:Element(name = "RouteNo", required = false)var RouteNo: Int = -1
-    @field:Element(name = "Summary", required = false)var summary: Summary? = null
+    @field:Element(name = "Summary", required = false)var Summary: Summary? = null
     @field:Element(name = "Details", required = false)var Details: Details? = null
 }
 
@@ -81,5 +81,5 @@ class SubSection{
 @Root(strict = false)
 class Tolls{
     @field:Element(name = "No", required = false)var No: Int = -1
-    @field:ElementList(entry = "Toll", required = false, inline = true)var Toll: List<String>? = null
+    @field:ElementList(entry = "Toll", required = false, inline = true)var Toll: List<String?>? = null
 }
