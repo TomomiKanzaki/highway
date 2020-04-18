@@ -97,8 +97,8 @@ dependencies {
     implementation 'com.rejasupotaro:kvs-schema:5.0.1'
 
     //simple(for xml parse)
-    compile 'org.simpleframework:simple-xml:2.7.1'
-    compile('com.squareup.retrofit2:converter-simplexml:2.0.0-beta4') {
+    implementation 'org.simpleframework:simple-xml:2.7.1'
+    implementation('com.squareup.retrofit2:converter-simplexml:2.0.0-beta4') {
         exclude module: 'stax'
         exclude module: 'stax-api'
         exclude module: 'xpp3'
